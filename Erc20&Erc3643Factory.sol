@@ -1319,7 +1319,7 @@ contract ERC3643 is ERC20, AccessControl, Pausable {
     bool public emergencyStopped;
 
     // Total token supply (fixed)
-    uint256 private immutable _totalSupply;
+    uint256 private immutable _erc3643TotalSupply;
 
     // Maximum transfer amount
     uint256 public maxTransferAmount;
@@ -1444,7 +1444,7 @@ contract ERC3643 is ERC20, AccessControl, Pausable {
 
     // Function to check the total supply (fixed)
     function totalTokenSupply() public view returns (uint256) {
-        return _totalSupply;
+        return _erc3643TotalSupply;
     }
 
     // Function to check if an account is frozen due to emergency stop
